@@ -1,8 +1,9 @@
+//Render Navbar Items
 const renderNavElement = (linkTo, text, classText) => {
   let navListElement = document.createElement("li");
   let navLinkElement = document.createElement("a");
   let navTextElement = document.createTextNode(text);
-  //create properties for list items
+
   navListElement.className = "menu-item";
   navLinkElement.className = classText + " nav-link";
   navLinkElement.href = linkTo;
@@ -23,6 +24,13 @@ const renderNavItems = () => {
 
 document.getElementById("navContainer").onload = renderNavItems();
 
+window.addEventListener("scroll", function () {
+  let nav = document.querySelector("nav");
+  let windowPosition = window.scrollY > 0;
+  nav.classList.toggle("nav-scroll", windowPosition);
+});
+
+//Render Information Cards
 const renderInformationCardElement = (la, text, content, linkTo) => {
   let infoCardContainer = document.createElement("div");
   let infoCardElement = document.createElement("div");
@@ -33,7 +41,7 @@ const renderInformationCardElement = (la, text, content, linkTo) => {
   let infoContent = document.createElement("p");
   let infoContentText = document.createTextNode(content);
 
-  infoCardContainer.className = "col-lg-3";
+  infoCardContainer.className = "col-lg-3 col-sm-6";
   infoCardElement.className = "info-card";
   infoCardIcon.className = "las la-" + la;
   infoLink.href = linkTo;
@@ -96,3 +104,115 @@ const renderInfoCardItems = () => {
 document.getElementById(
   "informationCardContainer"
 ).onload = renderInfoCardItems();
+
+//Render intro elements
+const renderInterestInElement = (la, text) => {
+  let introList = document.createElement("li");
+  let introIcon = document.createElement("i");
+  let introContent = document.createTextNode(text);
+
+  introIcon.className = "las la-" + la;
+
+  introIcon.appendChild(introContent);
+  introList.appendChild(introIcon);
+
+  return introList;
+};
+
+const renderInterestInItems = () => {
+  DUMMY_INTEREST_ICON.forEach((item) => {
+    document
+      .getElementById("interestList")
+      .appendChild(renderInterestInElement(item.class, item.text));
+  });
+};
+document.getElementById("interestList").onload = renderInterestInItems();
+
+//Create common card renderer
+const renderCommonElements = (la, header, content) => {
+  let commonCardContainer = document.createElement("div");
+  let commonCardElement = document.createElement("div");
+  let commonCardIcon = document.createElement("i");
+  let commonCardHeader = document.createElement("h3");
+  let commonCardHeaderText = document.createTextNode(header);
+  let commonCardContent = document.createElement("p");
+  let commonCardContentText = document.createTextNode(content);
+
+  commonCardContainer.className = "col-lg-4";
+  commonCardElement.className = "services-card";
+  commonCardIcon.className = "las la-" + la;
+
+  commonCardContent.appendChild(commonCardContentText);
+  commonCardHeader.appendChild(commonCardHeaderText);
+  commonCardElement.appendChild(commonCardIcon);
+  commonCardElement.appendChild(commonCardHeader);
+  commonCardElement.appendChild(commonCardContent);
+  commonCardContainer.appendChild(commonCardElement);
+
+  return commonCardContainer;
+};
+
+//Render services elements
+const renderServicesItems = () => {
+  DUMMY_SERVICES_CARD.forEach((item) => {
+    document
+      .getElementById("servicesCardContainer")
+      .appendChild(
+        renderCommonElements(item.class, item.header3, item.content)
+      );
+  });
+};
+
+document.getElementById("servicesCardContainer").onload = renderServicesItems();
+
+//Render fun facts elements
+const renderFunFactElements = (la, header, content) => {
+  let funFactsItem = document.createElement("div");
+  let funFactsElement = document.createElement("div");
+  let funFactsIcon = document.createElement("i");
+  let funFactsHeader = document.createElement("h3");
+  let funFactsHeaderSpan = document.createElement("span");
+  let funFactsHeaderText = document.createTextNode(header);
+  let funFactsContent = document.createElement("p");
+  let funFactsContentText = document.createTextNode(content);
+
+  funFactsItem.className = "col-lg-3";
+  funFactsElement.className = "single-fun-fact";
+  funFactsIcon.className = "las la" + la;
+
+  funFactsContent.appendChild(funFactsContentText);
+  funFactsHeaderSpan.appendChild(funFactsHeaderText);
+  funFactsHeader.appendChild(funFactsHeaderSpan);
+  funFactsElement.appendChild(funFactsIcon);
+  funFactsElement.appendChild(funFactsHeader);
+  funFactsElement.appendChild(funFactsContent);
+  funFactsItem.appendChild(funFactsElement);
+
+  return funFactsItem;
+};
+
+const renderFunFactItem = () => {
+  DUMMY_FUN_FACTS_ITEMS.forEach((item) => {
+    document
+      .getElementById("funFactsContainer")
+      .appendChild(
+        renderFunFactElements(item.class, item.header, item.content)
+      );
+  });
+};
+
+document.getElementById("funFactsContainer").onload = renderFunFactItem();
+
+//Render choose us cards
+
+const renderChooseUsItems = () => {
+  DUMMY_CHOOSE_US_CARDS.forEach((item) => {
+    document
+      .getElementById("chooseCardContainer")
+      .appendChild(
+        renderCommonElements(item.class, item.header, item.content)
+      );
+  }); 
+};
+
+document.getElementById("chooseCardContainer").onload = renderChooseUsItems();

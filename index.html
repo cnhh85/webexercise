@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/png" href="./assets/images/icon.png">
+    <link rel="icon" type="image/png" href="/assets/images/icon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <link rel="stylesheet" href="./assets/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/line-awesome/css/line-awesome.min.css"
+    />
     <title>Hipe</title>
   </head>
   <body>
     <div id="next">
-      <nav>
+      <nav class="navbar">
         <div class="container">
           <a class="logo" href="index.html">
-            <img src="./assets/images/logo.png" alt="logo" />
+            <img src="/assets/images/logo.png" alt="logo" />
           </a>
-          <div class="collapse navbar-collapse">
+          <div class="navbar-collapse">
             <ul class="navbar-nav" id="navContainer">
               <!-- Render items with JS -->
             </ul>
@@ -34,15 +37,16 @@
             <div class="col-lg-6">
               <div class="personal-banner-img">
                 <img
-                  src="./assets/images/personal-banner.png"
+                  src="/assets/images/personal-banner.png"
                   alt="personal banner"
                 />
+                <div class="personal-shape">
+                  <img src="/assets/images/shape1.png" class="shape-1" alt="shape 1" />
+                  <img src="/assets/images/shape2.png" class="shape-2" alt="shape 2" />
+                  <img src="/assets/images/shape3.png" class="shape-3" alt="shape 3" />
+                </div>
               </div>
-              <div class="personal-banner-shape">
-                <img src="./assets/images/shape1.png" alt="shape1" />
-                <img src="./assets/images/shape2.png" alt="shape2" />
-                <img src="./assets/images/shape3.png" alt="shape3" />
-              </div>
+              
             </div>
             <div class="col-lg-6">
               <div class="personal-banner-text">
@@ -56,15 +60,15 @@
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="personal-button">
-                  <a class="download-cv" href="index.html">Download CV</a>
-                  <a class="Hire Me" href="index.html">Hire Me</a>
+                  <a class="default-button download-cv" href="index.html">Download CV</a>
+                  <a class="default-button hire-me" href="index.html">Hire Me</a>
                 </div>
                 <div class="personal-text-shape">
-                  <img src="./assets/images/shape2.png" alt="shape2" />
-                  <img src="./assets/images/shape4.png" alt="shape4" />
-                  <img src="./assets/images/shape5.png" alt="shape5" />
-                  <img src="./assets/images/shape6.png" alt="shape6" />
-                  <img src="./assets/images/shape7.png" alt="shape7" />
+                  <img src="/assets/images/shape2.png" class="shape-2" alt="shape 2" />
+                  <img src="/assets/images/shape4.png" class="shape-4" alt="shape 4" />
+                  <img src="/assets/images/shape5.png" class="shape-5" alt="shape 5" />
+                  <img src="/assets/images/shape6.png" class="shape-6" alt="shape 6" />
+                  <img src="/assets/images/shape7.png" class="shape-7" alt="shape 7" />
                 </div>
               </div>
             </div>
@@ -85,7 +89,7 @@
           </div>
         </div>
       </div>
-      <div class="intro" class="intro-area">
+      <div id="intro" class="intro" class="intro-area">
         <div class="container">
           <div class="row align-center">
             <div class="col-lg-6">
@@ -107,8 +111,8 @@
                   deserunt mollit anim id est laborum.
                 </p>
                 <h3>Interest In:</h3>
-                <ul>
-                  <!-- //Render items with JS -->
+                <ul id="interestList">
+                  <!-- Render items with JS -->
                 </ul>
                 <div class="intro-button">
                   <a class="default-button" href="index.html">Get Started</a>
@@ -118,7 +122,7 @@
             <div class="col-lg-6">
               <div class="intro-img">
                 <img
-                  src="./assets/images/intro.jpg"
+                  src="/assets/images/intro.jpg"
                   class="intro-img"
                   alt="intro image"
                 />
@@ -138,15 +142,14 @@
               account.
             </p>
           </div>
-          <div class="row">
+          <div class="row" id="servicesCardContainer">
             <!-- Render items with JS -->
-
           </div>
         </div>
       </div>
-      <div class="fun-fact-area">
+      <div class="fun-facts-area">
         <div class="container">
-          <div class="row">
+          <div class="row" id="funFactsContainer">
             <!-- Render items with JS -->
           </div>
         </div>
@@ -161,16 +164,17 @@
                   <h2>Specialty in The Field Get Faster Solution</h2>
                 </div>
                 <div class="choose-us-img">
-                  <img src="./assets/images/choose.jpg" alt="choose us" />
+                  <img src="/assets/images/choose.jpg" alt="choose us" />
                   <div class="choose-us">
-                    <img src="./assets/images/choose1.png" alt="choose us 1" />
+                    <img src="/assets/images/choose1.png" alt="choose us 1" />
                   </div>
                   <div class="popup-video">
                     <div class="d-table">
                       <a class="popup-youtube">
                         <i class="las la-play"></i>
-                        <!-- <span class="riple pinkBg"></span> -->
-                        <!-- Render items with JS -->
+                        <span class="ripple pinkBg"></span>
+                        <span class="ripple pinkBg"></span>
+                        <span class="ripple pinkBg"></span>
                       </a>
                     </div>
                   </div>
@@ -179,7 +183,7 @@
             </div>
             <div class="col-lg-7">
               <div class="choose-card-content">
-                <div class="row">
+                <div class="row" id="chooseCardContainer">
                   <!-- Render items with JS -->
                 </div>
               </div>
@@ -199,7 +203,36 @@
             </p>
           </div>
           <div class="row">
-            <!-- Render items with JS -->
+            <div class="col-lg-4">
+              <div class="portfolio-card">
+                <img src="/assets/images/portfolio1.jpg" alt="Image" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-card">
+                <img src="/assets/images/portfolio2.jpg" alt="Image" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-card">
+                <img src="/assets/images/portfolio3.jpg" alt="Image" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-card">
+                <img src="/assets/images/portfolio4.jpg" alt="Image" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-card">
+                <img src="/assets/images/portfolio5.jpg" alt="Image" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-card">
+                <img src="/assets/images/portfolio6.jpg" alt="Image" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -289,21 +322,105 @@
                     ullamco.
                   </p>
                   <ul class="footer-social">
-                    <!-- Render items with JS -->
+                    <li>
+                      <a class="bg-1" href="#" target="_blank"
+                        ><i class="lab la-facebook-f bg-1"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a class="bg-2" href="#" target="_blank"
+                        ><i class="lab la-twitter bg-2"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a class="bg-3" href="#" target="_blank"
+                        ><i class="lab la-linkedin-in bg-3"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a class="bg-4" href="#" target="_blank"
+                        ><i class="lab la-instagram bg-4"></i
+                      ></a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-5 col-sm-6">
               <div class="row">
-                <!-- Render items with JS -->
+                <div class="col-lg-6 col-sm-6">
+                  <div class="footer-widget">
+                    <h3 class="title">Company</h3>
+                    <ul class="footer-text">
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Advertise</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Support</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Marketing</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Contact</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>About Us</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                  <div class="footer-widget">
+                    <h3 class="title">Quick Links</h3>
+                    <ul class="footer-text">
+                      <li>
+                        <a href="#"><i class="las la-angle-right"></i>Home</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Features</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Pricing</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Screenshot</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><i class="las la-angle-right"></i>Testimonial</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-3 col-sm-6 offset-sm-4 offset-lg-0">
               <div class="footer-widget">
                 <h3 class="title">Download Link</h3>
-                <div class="footer-img">
-                  <!-- Render items with JS -->
+                <div class="footer-image">
+                  <a href="#"
+                    ><img src="/assets/images/google-play.png" alt="Image" /></a
+                  ><a href="#"
+                    ><img src="/assets/images/app-store.png" alt="Image"
+                  /></a>
                 </div>
               </div>
             </div>
