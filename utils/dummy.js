@@ -62,7 +62,7 @@ const DUMMY_INTEREST_ICON = [
   },
   {
     class: "headphones",
-    text: "music",
+    text: "Music",
   },
   {
     class: "biking",

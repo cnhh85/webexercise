@@ -113,8 +113,8 @@ const renderInterestInElement = (la, text) => {
 
   introIcon.className = "las la-" + la;
 
-  introIcon.appendChild(introContent);
   introList.appendChild(introIcon);
+  introList.appendChild(introContent);
 
   return introList;
 };
@@ -129,7 +129,7 @@ const renderInterestInItems = () => {
 document.getElementById("interestList").onload = renderInterestInItems();
 
 //Create common card renderer
-const renderCommonElements = (la, header, content) => {
+const renderCommonElements = (la, header, content, element) => {
   let commonCardContainer = document.createElement("div");
   let commonCardElement = document.createElement("div");
   let commonCardIcon = document.createElement("i");
@@ -139,7 +139,7 @@ const renderCommonElements = (la, header, content) => {
   let commonCardContentText = document.createTextNode(content);
 
   commonCardContainer.className = "col-lg-4";
-  commonCardElement.className = "services-card";
+  commonCardElement.className = element + "-card";
   commonCardIcon.className = "las la-" + la;
 
   commonCardContent.appendChild(commonCardContentText);
@@ -154,11 +154,12 @@ const renderCommonElements = (la, header, content) => {
 
 //Render services elements
 const renderServicesItems = () => {
+  let element = "services";
   DUMMY_SERVICES_CARD.forEach((item) => {
     document
       .getElementById("servicesCardContainer")
       .appendChild(
-        renderCommonElements(item.class, item.header3, item.content)
+        renderCommonElements(item.class, item.header, item.content, element)
       );
   });
 };
@@ -176,9 +177,9 @@ const renderFunFactElements = (la, header, content) => {
   let funFactsContent = document.createElement("p");
   let funFactsContentText = document.createTextNode(content);
 
-  funFactsItem.className = "col-lg-3";
+  funFactsItem.className = "col-lg-3 col-sm-6";
   funFactsElement.className = "single-fun-fact";
-  funFactsIcon.className = "las la" + la;
+  funFactsIcon.className = "las la-" + la;
 
   funFactsContent.appendChild(funFactsContentText);
   funFactsHeaderSpan.appendChild(funFactsHeaderText);
@@ -206,13 +207,14 @@ document.getElementById("funFactsContainer").onload = renderFunFactItem();
 //Render choose us cards
 
 const renderChooseUsItems = () => {
+  let element = "choose-us";
   DUMMY_CHOOSE_US_CARDS.forEach((item) => {
     document
       .getElementById("chooseCardContainer")
       .appendChild(
-        renderCommonElements(item.class, item.header, item.content)
+        renderCommonElements(item.class, item.header, item.content, element)
       );
-  }); 
+  });
 };
 
 document.getElementById("chooseCardContainer").onload = renderChooseUsItems();
