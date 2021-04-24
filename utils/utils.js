@@ -129,7 +129,7 @@ const renderInterestInItems = () => {
 document.getElementById("interestList").onload = renderInterestInItems();
 
 //Create common card renderer
-const renderCommonElements = (la, header, content, element) => {
+const renderCommonElements = (la, header, content, element, col) => {
   let commonCardContainer = document.createElement("div");
   let commonCardElement = document.createElement("div");
   let commonCardIcon = document.createElement("i");
@@ -138,7 +138,7 @@ const renderCommonElements = (la, header, content, element) => {
   let commonCardContent = document.createElement("p");
   let commonCardContentText = document.createTextNode(content);
 
-  commonCardContainer.className = "col-lg-4";
+  commonCardContainer.className = col;
   commonCardElement.className = element + "-card";
   commonCardIcon.className = "las la-" + la;
 
@@ -155,11 +155,12 @@ const renderCommonElements = (la, header, content, element) => {
 //Render services elements
 const renderServicesItems = () => {
   let element = "services";
+  let col = "col-lg-4";
   DUMMY_SERVICES_CARD.forEach((item) => {
     document
       .getElementById("servicesCardContainer")
       .appendChild(
-        renderCommonElements(item.class, item.header, item.content, element)
+        renderCommonElements(item.class, item.header, item.content, element, col)
       );
   });
 };
@@ -208,11 +209,12 @@ document.getElementById("funFactsContainer").onload = renderFunFactItem();
 
 const renderChooseUsItems = () => {
   let element = "choose-us";
+  let col = "col-lg-6";
   DUMMY_CHOOSE_US_CARDS.forEach((item) => {
     document
       .getElementById("chooseCardContainer")
       .appendChild(
-        renderCommonElements(item.class, item.header, item.content, element)
+        renderCommonElements(item.class, item.header, item.content, element, col)
       );
   });
 };
