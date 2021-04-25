@@ -289,7 +289,7 @@ const renderPortfolioElement = (index, header) => {
   cardTable.className = "d-table";
   cardCaption.appendChild(cardTable);
   cardCaption.className = "caption";
-  cardImg.src = "/assets/images/portfolio" + (index + 1) + ".jpg";
+  cardImg.src = "./assets/images/portfolio" + (index + 1) + ".jpg";
   cardContainer.className = "col-lg-4";
   cardItem.appendChild(cardImg);
   cardItem.appendChild(cardCaption);
