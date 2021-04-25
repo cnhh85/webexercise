@@ -19,6 +19,7 @@ ul {
 }
 a {
   text-decoration: none;
+  transition: all .5s;
 }
 img {
   max-width: 100%;
@@ -132,7 +133,7 @@ p:last-child {
 .nav-link.active:before {
   transform: scale(1);
 }
-.active {
+.nav-link:hover:before {
   transform: scale(1);
 }
 .demo-side-icon {
@@ -244,7 +245,16 @@ p:last-child {
   color: #fff;
   margin-right: 1rem;
 }
+.download-cv:hover {
+  background-color: #567df4;
+  border: 1px solid #fff;
+}
 .hire-me {
+  color: #fff;
+}
+.hire-me:hover {
+  background-color: #ffba00;
+  border: 1px solid #ffba00;
   color: #fff;
 }
 .shape-4 {
@@ -434,6 +444,10 @@ p:last-child {
   background-color: #567df4;
   border: 1px solid #567df4;
   color: #fff;
+}
+.intro-button:hover .default-button {
+  background-color: #242424;
+  border: 1px solid #242424;
 }
 .intro-img {
   position: relative;
@@ -1046,4 +1060,7 @@ p:last-child {
 .go-top i:hover {
   background: #567df4;
   color: #fff;
+}
+.active {
+  transform: scale(1);
 }
