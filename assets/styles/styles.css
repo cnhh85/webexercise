@@ -916,10 +916,12 @@ p:last-child {
   opacity: 1;
   right: 0;
   top: 0;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #fff;
   display: inline-block;
+}
+.subscribe-form button:hover {
+  background-color: #242424;
 }
 .footer-area {
   padding-top: 200px;
