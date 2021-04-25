@@ -16,7 +16,7 @@
     <div id="next">
       <nav class="navbar">
         <div class="container">
-          <a class="logo" href="index.html">
+          <a class="logo" href="#">
             <img src="/assets/images/logo.png" alt="logo" />
           </a>
           <div class="navbar-collapse">
@@ -198,7 +198,7 @@
                   <span>Why Choose Us</span>
                   <h2>
                     Specialty in The Field <br />
-                   Get Faster Solution
+                    Get Faster Solution
                   </h2>
                 </div>
                 <div class="choose-img">
@@ -207,14 +207,12 @@
                     <img src="/assets/images/choose1.png" alt="choose us 1" />
                   </div>
                   <div class="popup-video">
-                    <div class="d-table">
-                      <a class="popup-shape">
-                        <i class="las la-play"></i>
-                        <span class="ripple pinkBg"></span>
-                        <span class="ripple pinkBg"></span>
-                        <span class="ripple pinkBg"></span>
-                      </a>
-                    </div>
+                    <a class="popup-shape">
+                      <i class="las la-play"></i>
+                      <span class="ripple pinkBg"></span>
+                      <span class="ripple pinkBg"></span>
+                      <span class="ripple pinkBg"></span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -240,40 +238,12 @@
               account.
             </p>
           </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="portfolio-card">
-                <img src="/assets/images/portfolio1.jpg" alt="Image" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="portfolio-card">
-                <img src="/assets/images/portfolio2.jpg" alt="Image" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="portfolio-card">
-                <img src="/assets/images/portfolio3.jpg" alt="Image" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="portfolio-card">
-                <img src="/assets/images/portfolio4.jpg" alt="Image" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="portfolio-card">
-                <img src="/assets/images/portfolio5.jpg" alt="Image" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="portfolio-card">
-                <img src="/assets/images/portfolio6.jpg" alt="Image" />
-              </div>
-            </div>
+          <div class="row" id="portfolioCardContainer">
+            <!-- Render items with JS -->
           </div>
         </div>
       </div>
+
       <div id="testimonials" class="testimonials-area">
         <div class="container">
           <div class="section-title">
@@ -285,9 +255,9 @@
               account.
             </p>
           </div>
-          <div id="slider" class="testimonials-sider">
-            <!-- JS slider -->
-          </div>
+        </div>
+        <div id="slider" class="testimonials-sider">
+          <h1>SLIDER GO HERE</h1>
         </div>
       </div>
       <div id="contact" class="contact-area">
@@ -303,8 +273,63 @@
             <form id="contact-form">
               <div class="row">
                 <!-- Render items with JS -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Your name"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="email"
+                      class="form-control"
+                      placeholder="Your email address"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="subject"
+                      class="form-control"
+                      placeholder="Your Subject"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="number"
+                      class="form-control"
+                      placeholder="Your phone number"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      name="text"
+                      class="form-control"
+                      cols="30"
+                      rows="6"
+                      placeholder="Write your message..."
+                    ></textarea>
+                  </div>
+                </div>
                 <div class="col-lg-12 col-md-12 text-center">
-                  <button type="submit" class="default-btn">
+                  <button type="submit" class="default-button">
                     Send Message
                   </button>
                 </div>
@@ -313,12 +338,12 @@
           </div>
         </div>
       </div>
-      <div class="subcribe-area">
+      <div class="subscribe-area">
         <div class="container">
-          <div class="subcribe-content">
+          <div class="subscribe-content">
             <div class="row align-center">
               <div class="col-lg-6">
-                <div class="subcribe-text">
+                <div class="subscribe-text">
                   <h3>Subscribe Our Newsletter</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -328,7 +353,7 @@
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="subcribe-form">
+                <div class="subscribe-form">
                   <form class="newsletter-form">
                     <input
                       type="email"
@@ -336,7 +361,7 @@
                       placeholder="Enter your email"
                       name="EMAIL"
                     />
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="button button-primary">
                       Subscribe
                     </button>
                   </form>

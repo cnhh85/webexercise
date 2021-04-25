@@ -160,7 +160,13 @@ const renderServicesItems = () => {
     document
       .getElementById("servicesCardContainer")
       .appendChild(
-        renderCommonElements(item.class, item.header, item.content, element, col)
+        renderCommonElements(
+          item.class,
+          item.header,
+          item.content,
+          element,
+          col
+        )
       );
   });
 };
@@ -214,9 +220,69 @@ const renderChooseUsItems = () => {
     document
       .getElementById("chooseCardContainer")
       .appendChild(
-        renderCommonElements(item.class, item.header, item.content, element, col)
+        renderCommonElements(
+          item.class,
+          item.header,
+          item.content,
+          element,
+          col
+        )
       );
   });
 };
 
 document.getElementById("chooseCardContainer").onload = renderChooseUsItems();
+
+//Render portfolio cards
+
+const renderPortfolioElement = (index, header) => {
+  let cardContainer = document.createElement("div");
+  let cardItem = document.createElement("div");
+  let cardImg = document.createElement("img");
+  let cardCaption = document.createElement("div");
+  let cardTable = document.createElement("div");
+  let cardTableCell = document.createElement("div");
+  let cardText = document.createElement("div");
+  let cardHeader = document.createElement("h3");
+  let cardHeaderText = document.createTextNode(header);
+  let cardContent = document.createElement("p");
+  let cardContentText = document.createTextNode(
+    "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the."
+  );
+  let cardLink = document.createElement("a");
+  let cardLinkIcon = document.createElement("i");
+
+  cardLinkIcon.className = "las la-arrow-right";
+  cardLink.appendChild(cardLinkIcon);
+  cardLink.href = "#";
+  cardContent.appendChild(cardContentText);
+  cardHeader.appendChild(cardHeaderText);
+  cardText.appendChild(cardHeader);
+  cardText.appendChild(cardContent);
+  cardText.appendChild(cardLink);
+  cardText.className = "cardText";
+  cardTableCell.appendChild(cardText);
+  cardTableCell.className = "d-table-cell"
+  cardTable.appendChild(cardTableCell);
+  cardTable.className = "d-table";
+  cardCaption.appendChild(cardTable);
+  cardCaption.className = "caption";
+  cardImg.src = "/assets/images/portfolio" + (index + 1) + ".jpg";
+  cardContainer.className = "col-lg-4";
+  cardItem.appendChild(cardImg);
+  cardItem.appendChild(cardCaption);
+  cardItem.className = "portfolio-card";
+  cardContainer.appendChild(cardItem);
+
+  return cardContainer;
+};
+
+const renderPortfolioItem = () => {
+  DUMMY_PORTFOLIO_CARD.forEach((item, index) => {
+    document
+      .getElementById("portfolioCardContainer")
+      .appendChild(renderPortfolioElement(index, item.header));
+  });
+};
+
+document.getElementById("portfolioCardContainer").onload = renderPortfolioItem();

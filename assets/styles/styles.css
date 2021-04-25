@@ -31,6 +31,17 @@ button {
   line-height: inherit;
   cursor: pointer;
 }
+button,
+input,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
 h1,
 h2,
 h3,
@@ -719,4 +730,189 @@ p:last-child {
 }
 .choose-us-card h3 {
   font-size: 22px;
+}
+.portfolio-area {
+  background-color: #f6f4ff;
+  padding-bottom: 70px;
+  padding-top: 100px;
+}
+.portfolio-card {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.portfolio-card img {
+  border-radius: 10px;
+}
+.caption {
+  padding: 15px 25px;
+  position: absolute;
+  background-color: #567df4;
+  border-radius: 10px;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.portfolio-card:hover .caption {
+  top: 0;
+}
+.d-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.d-table-cell {
+  vertical-align: middle;
+  display: table-cell;
+}
+.cardText {
+  text-align: center;
+  position: relative;
+}
+.cardText h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.cardText p {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.cardText a {
+  color: #fff;
+}
+.cardText a i {
+  font-size: 30px;
+}
+.testimonials-area {
+  padding-top: 100px;
+}
+.testimonials-area h1 {
+  text-align: center;
+  color: #661ae1;
+  font-size: 80px;
+}
+.contact-area {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+.contact-area .form-control {
+  height: 60px;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  color: #242424;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.col-lg-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.form-group .form-control {
+  height: auto;
+}
+.text-center {
+  text-align: center;
+}
+.text-center .default-button {
+  background-color: #567df4;
+  color: #fff;
+  transition: all 0.5s;
+}
+.text-center .default-button:hover {
+  background-color: #242424;
+  color: #fff;
+}
+.subscribe-area {
+  margin-bottom: -100px;
+}
+.subscribe-content {
+  background-image: url(../images/subcribe-background.jpg);
+  padding: 50px 80px;
+  border-radius: 10px;
+  position: relative;
+  background-size: cover;
+}
+.subscribe-content:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(270deg, rgba(255, 0, 0, 0), #0d032b);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+.subscribe-text {
+  max-width: 414px;
+  margin-right: auto;
+}
+.subscribe-text h3 {
+  font-size: 36px;
+  color: #fff;
+}
+.subscribe-text p {
+  color: #fff;
+}
+.subscribe-form {
+  position: relative;
+}
+.subscribe-form .form-control {
+  max-width: 360px;
+  height: auto;
+  padding: 15px 25px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 40px;
+}
+.subscribe-form button {
+  padding: 15px 50px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #567df4;
+  box-shadow: none;
+  font-weight: 600;
+  border: none;
+  position: absolute;
+  opacity: 1;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  display: inline-block;
 }

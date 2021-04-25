@@ -164,3 +164,24 @@ const DUMMY_CHOOSE_US_CARDS = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
   },
 ];
+
+const DUMMY_PORTFOLIO_CARD = [
+  {
+    header: "Web Design",
+  },
+  {
+    header: "UI/UX Design",
+  },
+  {
+    header: "Web Development",
+  },
+  {
+    header: "App Development",
+  },
+  {
+    header: "Digital Marketing",
+  },
+  {
+    header: "App Design",
+  },
+];
