@@ -26,8 +26,30 @@ document.getElementById("navContainer").onload = renderNavItems();
 
 window.addEventListener("scroll", function () {
   let nav = document.querySelector("nav");
-  let windowPosition = window.scrollY > 0;
+  let goTop = document.getElementById("goTopButton");
+  let windowPosition = window.scrollY > 100;
   nav.classList.toggle("nav-scroll", windowPosition);
+  goTop.classList.toggle("active", windowPosition);
+});
+
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll(".navbar-collapse .navbar-nav li a");
+navLi[0].className += " active";
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.className += " active";
+    }
+  });
 });
 
 //Render Information Cards
