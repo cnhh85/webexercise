@@ -205,6 +205,9 @@ p:last-child {
   .navbar-nav {
     flex-direction: row;
   }
+  .navbar-toggler {
+    display: none;
+  }
 }
 .demo-side-icon {
   position: fixed;
@@ -247,12 +250,16 @@ p:last-child {
   align-items: center !important;
 }
 .col-lg-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+}
+@media (min-width: 992px) {
+  .col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
 }
 .personal-banner-img {
   position: relative;
@@ -403,6 +410,19 @@ p:last-child {
   }
   .personal-banner-img {
     margin-bottom: 30px;
+  }
+  .personal-banner-text span {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .personal-banner-text h1 {
+    font-size: 40px;
+  }
+  .personal-banner-text h3 {
+    font-size: 20px;
+  }
+  .personal-banner-text p {
+    font-size: 16px;
   }
 }
 .information-area {

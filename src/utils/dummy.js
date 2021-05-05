@@ -19,11 +19,11 @@ const DUMMY_NAV_MENU_ITEMS = [
     text: "Portfolio",
     class: "portfolio",
   },
-  {
-    href: "#testimonials",
-    text: "Testimonials",
-    class: "testimonials",
-  },
+  // {
+  //   href: "#testimonials",
+  //   text: "Testimonials",
+  //   class: "testimonials",
+  // },
   {
     href: "#contact",
     text: "Contact Me",
