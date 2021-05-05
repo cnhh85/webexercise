@@ -87,7 +87,7 @@ const renderFourthInfoCardElement = (la, text, content) => {
   let infoContent = document.createElement("p");
   let infoContentText = document.createTextNode(content);
 
-  infoCardContainer.className = "col-lg-3";
+  infoCardContainer.className = "col-lg-3 col-sm-6";
   infoCardElement.className = "info-card";
   infoCardIcon.className = "las la-" + la;
 
@@ -177,7 +177,7 @@ const renderCommonElements = (la, header, content, element, col) => {
 //Render services elements
 const renderServicesItems = () => {
   let element = "services";
-  let col = "col-lg-4";
+  let col = "col-lg-4 col-md-6";
   DUMMY_SERVICES_CARD.forEach((item) => {
     document
       .getElementById("servicesCardContainer")
@@ -237,7 +237,7 @@ document.getElementById("funFactsContainer").onload = renderFunFactItem();
 
 const renderChooseUsItems = () => {
   let element = "choose-us";
-  let col = "col-lg-6";
+  let col = "col-lg-6 col-sm-6";
   DUMMY_CHOOSE_US_CARDS.forEach((item) => {
     document
       .getElementById("chooseCardContainer")
